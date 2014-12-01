@@ -1,0 +1,64 @@
+
+get '/' do
+ erb :index
+end
+
+get '/signin' do
+  erb :signin
+end
+
+post '/signin' do
+ user = User.find_by(username: params[:username])
+  if user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect '/goals'
+    else
+      redirct '/signin'
+    end
+end
+
+get '/signout' do
+  session.clear
+  redirect '/'
+end
+
+get '/signup' do
+  erb :signup
+end
+
+post '/signup' do
+  if user = User.new(username: params[:username], password: params[:password])
+    user.save
+  end
+  redirect '/goals'
+  # if @user.save
+  #   session[:user_id] = @user.id
+ #  else
+ #    erb :signup
+ # end
+
+end
+
+get '/goals' do
+  if session[:user_id]
+    # @all_goals = Goal.all
+    @user_goals =
+    erb :goals
+  else
+    redirect '/'
+  end
+end
+
+get '/newgoal' do
+  erb :newgoal
+end
+
+post '/newgoal' do
+  # p params
+  @new_goal = current_user.goals.build(goal_description: params[:goal_description])
+  # @new_goal = Goal.new(goal_description: params[:goal_description])
+  @new_goal.save
+  redirect '/goals'
+  erb :newgoal
+end
+
