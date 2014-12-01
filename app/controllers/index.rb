@@ -31,18 +31,12 @@ post '/signup' do
     user.save
   end
   redirect '/goals'
-  # if @user.save
-  #   session[:user_id] = @user.id
- #  else
- #    erb :signup
- # end
-
 end
 
 get '/goals' do
   if session[:user_id]
     # @all_goals = Goal.all
-    @user_goals =
+    @user_goals = current_user.goals
     erb :goals
   else
     redirect '/'
@@ -55,10 +49,13 @@ end
 
 post '/newgoal' do
   # p params
-  @new_goal = current_user.goals.build(goal_description: params[:goal_description])
+  @new_goal = current_user.goals.build(goal_description: params[:goal_description], number_of_days: params[:number_of_days])
   # @new_goal = Goal.new(goal_description: params[:goal_description])
   @new_goal.save
   redirect '/goals'
   erb :newgoal
 end
+
+
+
 

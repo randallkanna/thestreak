@@ -9,16 +9,18 @@
   </div>
 
 
-
-
 <div id="goals-container">
-<center>
-  <h3>Current Goals</h3>
+<center><br>
+    <% @user_goals.each do |item| %>
+     <p> <%= p item.goal_description %>
+      Days left:
+      <%= p item.number_of_days %>
+    </p>
+    <% end %>
+<!--   <h3>Current Goals</h3>
    <% Goal.all.each do |goal| %>
     <h4> <%= puts goal.goal_description %></h4>
-   <% end %>
-
-
+   <% end %> -->
 
 
 </center>
