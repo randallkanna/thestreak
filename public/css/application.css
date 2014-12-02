@@ -60,7 +60,7 @@ li {
 }
 
 .main-container-sub {
-  height: 1000px;
+  height: 600px;
   padding-top: 35%;
 }
 
@@ -91,7 +91,8 @@ li {
 /* Sign In */
 
 .form-container {
-  margin-top: 25%;
+  margin-top: 24%;
+/*  margin-bottom: 17%;*/
 }
 
 .form-container a, a:visited, a:link, a:hover {
