@@ -125,3 +125,17 @@ h2 {
 
 /* FOOTER */
 
+footer {
+  z-index: 1;
+  background-color: white;
+  height: 100;
+  bottom: 0;
+}
+
+footer img {
+  padding-top: 5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 5%;
+}
+
