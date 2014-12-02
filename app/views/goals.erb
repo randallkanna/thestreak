@@ -11,14 +11,28 @@
 <center><br>
   <div class="goal-individual-display">
     <% @user_goals.each do |item| %>
-     <h4> <%= p item.goal_description %></h4>
+     <h4> <%= p item.goal_name %></h4>
       <p>Days left:
-      <%= p item.number_of_days %></p>
+      <%= p item.goal_description %></p>
 
       <button>DECREASE</button>
-
     </p>
     <% end %>
+
+   <table style="width:20%">
+      <tr>
+
+        <td>TEST</td>
+        <td>TEST</td>
+      </tr>
+      <tr>
+        <td>TEST</td>
+        <td>TEST</td>
+        <td>TEST</td>
+      </tr>
+    </table>
+
+
   </div>
 </center>
 </div>

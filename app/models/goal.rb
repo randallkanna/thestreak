@@ -1,4 +1,4 @@
 class Goal < ActiveRecord::Base
   belongs_to :user
-  has_many :days
+  has_one :schedule
 end

@@ -21,7 +21,6 @@ p {
   padding-bottom: 5%;
 }
 
-
 #nav {
   position: fixed;
   background-color: #2f2e2e;
@@ -51,7 +50,6 @@ li {
   padding-left: 2.8844%;
   padding-right: 2.8844%;
 }
-
 
 
 /* Index Page Styles */
@@ -86,7 +84,6 @@ li {
   font-size: 20px;
   color: white;
 }
-
 
 
 /* Sign In */
