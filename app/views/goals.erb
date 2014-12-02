@@ -11,9 +11,9 @@
 <center><br>
   <div class="goal-individual-display">
     <% @user_goals.each do |item| %>
-     <p> <%= p item.goal_description %><br>
-      Days left:
-      <%= p item.number_of_days %>
+     <h4> <%= p item.goal_description %></h4>
+      <p>Days left:
+      <%= p item.number_of_days %></p>
 
       <button>DECREASE</button>
 

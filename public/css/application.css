@@ -1,21 +1,14 @@
-/*
-body {
-  background-image: url(http://joltinjoe.com/wp-content/uploads/2014/04/bg.jpg);
-  font-family: 'Open Sans';
-}*/
-
-
 
 body {
-  background-image: url("https://dl-web.dropbox.com/get/WCC_JOE_Joltin'_Joe/_Images_purchased/shutterstock_182874521.jpg?_subject_uid=4358074&w=AADKi7KT_3vFZd3SSWIF4ah_Phz3QiJazb3TJBonf-OPxA");
+  background-image: url("/images/chalk.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Open Sans';
 }
-
 
 p {
   font-family: 'Open Sans';
 }
-
 
 /* HEADER */
 
@@ -30,6 +23,7 @@ p {
 
 
 #nav {
+  position: fixed;
   background-color: #2f2e2e;
   top: 0;
   height: 9%;
@@ -58,14 +52,21 @@ li {
 }
 
 
-/* FOOTER */
-
-
 
 /* Index Page Styles */
 
 .main-container {
   height: 40%;
+}
+
+.main-container-sub {
+  height: 1000px;
+  padding-top: 40%;
+}
+
+.main-container-sub {
+  list-style: none;
+  display: inline-block;
 }
 
 .main-container h1 {
@@ -78,7 +79,7 @@ li {
 .sub-text {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #463A33;
+  color: white;
 }
 
 
@@ -116,4 +117,7 @@ h2 {
   font-color: black;
   font-family: 'Open Sans';
 }
+
+
+/* FOOTER */
 
