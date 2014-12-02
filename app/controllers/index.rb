@@ -53,7 +53,8 @@ end
 post '/newgoal' do
   # p params
   @new_goal = current_user.goals.build(goal_name: params[:goal_name], goal_description: params[:goal_description])
-  # @new_goal = Goal.new(goal_description: params[:goal_description])
+  @new_schedule = Goal.new()
+  @new_schedule.save
   @new_goal.save
   redirect '/goals'
   erb :newgoal
