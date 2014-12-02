@@ -61,12 +61,16 @@ li {
 
 .main-container-sub {
   height: 1000px;
-  padding-top: 40%;
+  padding-top: 35%;
 }
 
 .main-container-sub {
   list-style: none;
   display: inline-block;
+}
+
+#images-index {
+  margin-left: 40px;
 }
 
 .main-container h1 {
