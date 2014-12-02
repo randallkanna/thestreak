@@ -25,6 +25,7 @@ p {
 #nav {
   position: fixed;
   background-color: #2f2e2e;
+  opacity: 0.98;
   top: 0;
   height: 9%;
   width: 100%;
