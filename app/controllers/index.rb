@@ -37,6 +37,9 @@ get '/goals' do
   if session[:user_id]
     # @all_goals = Goal.all
     @user_goals = current_user.goals
+    @goals = Goal.find_by(user: current_user.id)
+    @day_number = @goals.number_of_days
+    # @decrease_goals = @goals.update(number_of_days: )
     erb :goals
   else
     redirect '/'

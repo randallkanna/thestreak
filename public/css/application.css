@@ -1,8 +1,16 @@
-
+/*
 body {
   background-image: url(http://joltinjoe.com/wp-content/uploads/2014/04/bg.jpg);
   font-family: 'Open Sans';
+}*/
+
+
+
+body {
+  background-image: url("https://dl-web.dropbox.com/get/WCC_JOE_Joltin'_Joe/_Images_purchased/shutterstock_182874521.jpg?_subject_uid=4358074&w=AADKi7KT_3vFZd3SSWIF4ah_Phz3QiJazb3TJBonf-OPxA");
+  font-family: 'Open Sans';
 }
+
 
 p {
   font-family: 'Open Sans';
@@ -19,6 +27,7 @@ p {
   padding-left: 4%;
   padding-bottom: 5%;
 }
+
 
 #nav {
   background-color: #2f2e2e;
@@ -69,7 +78,7 @@ li {
 .sub-text {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: white;
+  color: #463A33;
 }
 
 
@@ -98,6 +107,12 @@ h2 {
   height: 500px;
   margin-top: 10%;
   margin-left: 15%;
+  font-color: black;
+  font-family: 'Open Sans';
+  opacity: 0.5;
+}
+
+.goal-individual-display {
   font-color: black;
   font-family: 'Open Sans';
 }

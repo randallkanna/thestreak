@@ -4,24 +4,21 @@
           <li><a href="/goals">Current Streaks</a></li>
           <li><a href="/newgoal">New Goal</a></li>
           <li><a href="/signout">Logout<a/></li>
-          <!-- <li>Logout</li> -->
       </ul></div>
   </div>
 
-
 <div id="goals-container">
 <center><br>
+  <div class="goal-individual-display">
     <% @user_goals.each do |item| %>
-     <p> <%= p item.goal_description %>
+     <p> <%= p item.goal_description %><br>
       Days left:
       <%= p item.number_of_days %>
+
+      <button>DECREASE</button>
+
     </p>
     <% end %>
-<!--   <h3>Current Goals</h3>
-   <% Goal.all.each do |goal| %>
-    <h4> <%= puts goal.goal_description %></h4>
-   <% end %> -->
-
-
+  </div>
 </center>
 </div>
