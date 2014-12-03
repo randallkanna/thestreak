@@ -10,6 +10,8 @@ p {
   font-family: 'Open Sans';
 }
 
+
+
 /* HEADER */
 
 #nav h2 {
@@ -86,6 +88,8 @@ li {
 }
 
 
+
+
 /* Sign In */
 
 .form-container {
@@ -104,6 +108,13 @@ h2 {
 }
 
 
+.goal-individual-display h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color: black;
+}
+
+
 /* GOALS */
 #goals-container {
   background-color: white;
@@ -119,6 +130,11 @@ h2 {
 .goal-individual-display {
   font-color: black;
   font-family: 'Open Sans';
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 19px 65px;
 }
 
 

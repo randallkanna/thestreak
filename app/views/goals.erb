@@ -11,29 +11,46 @@
 <center><br>
   <div class="goal-individual-display">
     <% @user_goals.each do |item| %>
-     <h4> <%= p item.goal_name %></h4>
-      <p>Days left:
+     <h2> <%= p item.goal_name %></h2>
+      <p>
       <%= p item.goal_description %></p>
-
-      <button>Useless Button</button>
     </p>
     <% end %>
 
-    <!-- Testing Display -->
-
-<!--    <table style="width:20%">
+   <table style="width:90%">
       <tr>
+        <td>Day 1 </td>
+        <td>Day 2 </td>
+        <td>Day 3</td>
+        <td>Day 4</td>
+        <td>Day 5</td>
+        <td>Day 6</td>
+        <td>Day 7</td>
 
-        <td>TEST</td>
-        <td>TEST</td>
       </tr>
       <tr>
-        <td>TEST</td>
-        <td>TEST</td>
-        <td>TEST</td>
+        <td>Day 8</td>
+        <td>Day 9</td>
+        <td>Day 10</td>
+        <td>Day 11</td>
+        <td>Day 12</td>
+        <td>Day 13</td>
+        <td>Day 14</td>
+
       </tr>
+       <tr>
+        <td>Day 15</td>
+        <td>Day 16</td>
+        <td>Day 17</td>
+        <td>Day 18</td>
+        <td>Day 19</td>
+        <td>Day 20</td>
+        <td>Day 21</td>
+      </tr>
+
+
     </table>
- -->
+
 
   </div>
 </center>

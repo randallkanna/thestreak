@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :goals
+  has_many :schedules, through: :goals
 
    include BCrypt
 

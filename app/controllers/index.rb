@@ -53,12 +53,18 @@ end
 post '/newgoal' do
   # p params
   @new_goal = current_user.goals.build(goal_name: params[:goal_name], goal_description: params[:goal_description])
-  @new_schedule = Goal.new()
-  @new_schedule.save
+   # loop through 21 times
+   current_user.goals.each do |goal|
+     21.times { goal.schedules << Schedule.create() }
+   end
   @new_goal.save
   redirect '/goals'
   erb :newgoal
 end
+
+# Implement a way of deleting a goal as well!
+
+# Able to create many goals just need to change how they look
 
 # Save the access token for each user in the database (for future use).
 # Make API requests against the user's profile:
@@ -67,7 +73,7 @@ end
 # Look at the API docs and find what other actions you can do on behalf of the user.
 
 get '/redirect_auth_url' do
-  client_id = "438933370330-c981ncf2po8qdumst3dtsbnursonhh0o.apps.googleusercontent.com"
+  client_id = ""
   redirect "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=#{client_id}&redirect_uri=https://thestreak.herokuapp.com/signedin&scope=https://www.googleapis.com/auth/plus.login&state=12345&approval_prompt=force"
 end
 
@@ -79,7 +85,7 @@ get '/signedin' do
   token_response = HTTParty.post("https://accounts.google.com/o/oauth2/token",
                                 body: {
                                       code: params[:code],
-                                      client_id: "438933370330-c981ncf2po8qdumst3dtsbnursonhh0o.apps.googleusercontent.com",
+                                      client_id: "",
                                       client_secret: "ENV['SECRETKEY']",
                                       redirect_uri: "https://thestreak.herokuapp.com/signedin", # what you specify in your developer console (this matches the route we are currently in)
                                       grant_type: "authorization_code"
