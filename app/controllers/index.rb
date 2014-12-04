@@ -55,16 +55,13 @@ end
 
 get '/goals' do
   if session[:user_id]
-    # @all_goals = Goal.all
     @user_goals = current_user.goals
     @user_schedule = Schedule.where(user_id: params)
     @user = current_user.id
     @goal = Goal.where(user_id: @user)
     @schedule = Schedule.where(goal_id: @goal)
 
-
     erb :goals
-
   else
     redirect '/'
   end
