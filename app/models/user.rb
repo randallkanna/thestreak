@@ -17,5 +17,4 @@ class User < ActiveRecord::Base
     return true if Password.new(self.hashed_password) == user_password
     false
   end
-
 end

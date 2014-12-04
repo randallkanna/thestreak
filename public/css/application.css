@@ -24,9 +24,10 @@ p {
 }
 
 #nav {
+  z-index: 1;
   position: fixed;
   background-color: #2f2e2e;
-  opacity: 0.98;
+  opacity: 0.901;
   top: 0;
   height: 9%;
   width: 100%;
@@ -88,8 +89,6 @@ li {
 }
 
 
-
-
 /* Sign In */
 
 .form-container {
@@ -101,40 +100,86 @@ li {
   color: black;
 }
 
-h2 {
+.form-container h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
+  color: white;
+}
+
+.form-container p {
   color: white;
 }
 
 
-.goal-individual-display h2 {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 25px;
-  color: black;
-}
 
 
 /* GOALS */
+.goal-individual-display h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  color: white;
+  margin-left: -10%;
+}
+
+.goal-individual-display h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: white;
+  margin-left: -11%;
+}
+
+
 #goals-container {
-  background-color: white;
+  /*background-color: white;*/
   width: 70%;
   height: 500px;
-  margin-top: 10%;
-  margin-left: 15%;
-  font-color: black;
+  margin-top: 5%;
+  margin-left: 19%;
+  font-color: white;
   font-family: 'Open Sans';
   opacity: 0.5;
 }
 
 .goal-individual-display {
-  font-color: black;
+  font-color: white;
+  color: white;
   font-family: 'Open Sans';
 }
 
-table {
-    border-collapse: separate;
-    border-spacing: 19px 65px;
+#schedule-container {
+  margin-top: 17%;
+  color: white;
+  font-color: white;
+}
+
+#schedule-container ul {
+  font-color: white;
+  list-style-type: none;
+  color: white;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+#schedule-container li {
+  background-color: white;
+  font-size: 15px;
+  line-height: 40px;
+  list-style-type: none;
+  color: black;
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+}
+
+
+.button-click {
+  color: black;
+  background: white;
+  border:1px solid #1A356E;
+  padding:2px 6px;
+  font-family:'Helvetica',sans-serif;
+  font-size:11px;
 }
 
 

@@ -11,46 +11,34 @@
 <center><br>
   <div class="goal-individual-display">
     <% @user_goals.each do |item| %>
-     <h2> <%= p item.goal_name %></h2>
-      <p>
-      <%= p item.goal_description %></p>
-    </p>
+     <h1> <%= item.goal_name %></h1>
+      <h4>
+      <%= item.goal_description %></h4>
+
+
+<div id="schedule-container">
+    <ul>
+      <% @schedule.each_with_index do |item, index| %>
+
+        <li><strong>Day <%= index + 1  %></strong><br><br><br>
+        <strong>Complete?</strong>
+
+            <% if item.complete == false %>
+              <%= p "Incomplete"  %>
+            <% elsif item.complete == true %>
+              <%= p "Complete!" %>
+            <% end %>
+
+        <br><br>
+        <input type ="submit" color="black" class="button-click" data-id="<%= item.id %>"> </input>
+
+      </li>
+
+
+
+      <% end %></ul>
     <% end %>
-
-   <table style="width:90%">
-      <tr>
-        <td>Day 1 </td>
-        <td>Day 2 </td>
-        <td>Day 3</td>
-        <td>Day 4</td>
-        <td>Day 5</td>
-        <td>Day 6</td>
-        <td>Day 7</td>
-
-      </tr>
-      <tr>
-        <td>Day 8</td>
-        <td>Day 9</td>
-        <td>Day 10</td>
-        <td>Day 11</td>
-        <td>Day 12</td>
-        <td>Day 13</td>
-        <td>Day 14</td>
-
-      </tr>
-       <tr>
-        <td>Day 15</td>
-        <td>Day 16</td>
-        <td>Day 17</td>
-        <td>Day 18</td>
-        <td>Day 19</td>
-        <td>Day 20</td>
-        <td>Day 21</td>
-      </tr>
-
-
-    </table>
-
+</div>
 
   </div>
 </center>

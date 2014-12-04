@@ -4,8 +4,34 @@ $(document).ready(function() {
   // when we try to bind to them
 
   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+//   Datatype needed?
+
+  $('.button-click').on('click', function(e) {
+    e.preventDefault();
+    $.ajax({
+          url:"/goals",
+          type:'put',
+          data: {id: $(this).attr("data-id")},
+          dataType: 'JSON'
+        }).done(function(serverData) {
+          console.log(serverData)
+          // Do action here
+          // console.log(serverData);
+        }).
+          fail(function(serverData) {
+            console.log("That... Did not work at all");
+                      console.log(serverData);
+
+    });
+  });
+});
 
 
 
 
-};
+
+
+
+
+
+
