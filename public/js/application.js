@@ -5,7 +5,7 @@
 
 //   // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
 // //   Datatype needed?
-
+// BIND THIS
 //   $('.button-click').on('click', function(e) {
 //     e.preventDefault();
 //     $.ajax({

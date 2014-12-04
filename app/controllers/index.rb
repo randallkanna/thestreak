@@ -1,4 +1,6 @@
 
+#  Make these routes restful!
+
 get '/' do
  erb :index
 end
@@ -33,10 +35,12 @@ post '/signup' do
   redirect '/goals'
 end
 
+#  Make restful routes
 get '/newgoal' do
   erb :newgoal
 end
 
+#  Make restful routes
 post '/newgoal' do
   # p params
   @new_goal = current_user.goals.build(goal_name: params[:goal_name], goal_description: params[:goal_description])
