@@ -70,12 +70,12 @@ get '/goals' do
   end
 end
 
-put '/goals' do
-    if request.xhr?
-       @goal_update = @schedule.where(id: params[:id]).complete = true
-       @goal_update.to_json
-     end
-end
+# put '/goals' do
+#     if request.xhr?
+#        @goal_update = @schedule.where(id: params[:id]).complete = true
+#        @goal_update.to_json
+#      end
+# end
 
 
 
