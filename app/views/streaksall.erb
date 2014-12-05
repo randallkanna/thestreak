@@ -1,0 +1,32 @@
+  <div id="nav">
+      <h2><a href="/">THE STREAK<a/></h2>
+      <ul>
+          <li><a href="/streaks/all">Home</a></li>
+          <li><a href="/goals">Your Streaks</a></li>
+          <li><a href="/newgoal">New Streak</a></li>
+          <li><a href="/signout">Logout<a/></li>
+      </ul></div>
+  </div>
+
+
+<div id="streaks-container">
+  <div class="form-streak">
+  <center>
+    <h2>Status</h2>
+    <form action ="/streaks/all" method="POST">
+      <input type="text" name="content" placeholder="Broke your streak?" size="50">
+      <input type="submit"><br><br>
+     </form>
+
+  <table>
+    <tr>
+      <td>
+       <% Status.all.each do |item| %>
+          <%= item.content %>
+          <!-- <%= item.user %> -->
+       <% end %>
+    </td>
+    </tr>
+
+</div>
+

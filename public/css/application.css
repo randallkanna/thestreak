@@ -183,6 +183,32 @@ li {
 }
 
 
+/* STREAKS */
+#streaks-container {
+  margin-top: ;
+}
+
+.form-streak {
+  margin-top: 7%;
+/*  margin-bottom: 17%;*/
+}
+
+.form-streak a, a:visited, a:link, a:hover {
+  color: black;
+}
+
+.form-streak h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color: white;
+}
+
+.form-streak p {
+  color: white;
+}
+
+
+
 /* FOOTER */
 
 footer {
@@ -207,3 +233,6 @@ footer img {
 .darken_hover img {
     display: block;
 }
+
+
+
