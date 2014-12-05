@@ -93,23 +93,23 @@ end
 # Look at the API docs and find what other actions you can do on behalf of the user.
 
 
-get '/redirect_auth_url' do
-  client_id = ENV["CLIENT_I_D"]
-  scope_url = "https://www.googleapis.com/auth/plus.login&state=12345&approval_prompt=force"
-  redirect_uri = "https://thestreak.herokuapp.com/signedin"
-  redirect "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=#{client_id}&redirect_uri=#{redirect_uri}&scope=#{scope_url}"
-end
+# get '/redirect_auth_url' do
+#   client_id = ENV["CLIENT_I_D"]
+#   scope_url = "https://www.googleapis.com/auth/plus.login&state=12345&approval_prompt=force"
+#   redirect_uri = "https://thestreak.herokuapp.com/signedin"
+#   redirect "https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=#{client_id}&redirect_uri=#{redirect_uri}&scope=#{scope_url}"
+# end
 
-get '/logged_in' do
-  token_response = HTTParty.post("https://accounts.google.com/o/oauth2/token",
-                                body: {
-                                      code: params[:code],
-                                      client_id: ENV["CLIENT_I_D"],
-                                      client_secret: ENV["SECRETKEY"],
-                                      redirect_uri: "https://thestreak.herokuapp.com/signedin",
-                                      grant_type: "authorization_code"
-                                })
+# get '/logged_in' do
+#   token_response = HTTParty.post("https://accounts.google.com/o/oauth2/token",
+#                                 body: {
+#                                       code: params[:code],
+#                                       client_id: ENV["CLIENT_I_D"],
+#                                       client_secret: ENV["SECRETKEY"],
+#                                       redirect_uri: "https://thestreak.herokuapp.com/signedin",
+#                                       grant_type: "authorization_code"
+#                                 })
 
-  google_plus_response = HTTParty.get("https://www.googleapis.com/plus/v1/people/me?access_token=#{token_response["access_token"]}")
-  google_plus_response
-end
+#   google_plus_response = HTTParty.get("https://www.googleapis.com/plus/v1/people/me?access_token=#{token_response["access_token"]}")
+#   google_plus_response
+# end
