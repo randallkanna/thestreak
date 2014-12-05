@@ -21,16 +21,21 @@
       <% @schedule.each_with_index do |item, index| %>
 
         <li><strong>Day <%= index + 1  %></strong><br><br><br>
-        <strong>Complete?</strong>
 
             <% if item.complete == false %>
-              <%= p "Incomplete"  %>
+             Status: <%= p "Incomplete"  %>
             <% elsif item.complete == true %>
               <%= p "Complete!" %>
             <% end %>
 
+
+
         <br><br>
-<!--         <input type ="submit" color="black" class="button-click" data-id="<%= item.id %>"> </input> -->
+        <form action="/goals" method="post" class="schedule-form">
+          <input type="hidden" name="_method" value="put">
+        <input type ="submit" color="black" class="button-click" data-id="<%= item.id %>"> </input>
+
+      </form>
 
       </li>
 

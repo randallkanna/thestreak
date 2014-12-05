@@ -64,17 +64,24 @@ get '/goals' do
     @user = current_user.id
     @goal = Goal.where(user_id: @user)
     @schedule = Schedule.where(goal_id: @goal)
-
     erb :goals
   else
     redirect '/'
   end
 end
 
+
+
 # put '/goals' do
+
 #     if request.xhr?
-#        @goal_update = @schedule.where(id: params[:id]).complete = true
-#        @goal_update.to_json
+#         schedule = Schedule.where(id: params[:id])
+#         schedule.complete = true
+
+
+#        # @goal_update = @schedule.where(id: params[:id])
+#        # .complete = true
+#        # @goal_update.to_json
 #      end
 # end
 
@@ -113,3 +120,4 @@ end
 #   google_plus_response = HTTParty.get("https://www.googleapis.com/plus/v1/people/me?access_token=#{token_response["access_token"]}")
 #   google_plus_response
 # end
+
