@@ -10,28 +10,28 @@ $(document).ready(function() {
 // };
 
 
-  // $('.schedule-form').on('submit', function(e) {
-  //   e.preventDefault();
-  //   // console.log(this);
-  //   $.ajax({
-  //         url:"/goals",
-  //         type:'put',
-  //         dataType: 'JSON',
-  //         data: {id: $(this).attr("data-id")}
-  //       }).done(function(serverData) {
-  //         console.log(serverData)
-  //         // Do action here
-  //         // console.log(serverData);
-  //       }).
-  //         fail(function(serverData) {
-  //           console.log("That... Did not work at all");
-  //           console.log(serverData);
+//   $('.schedule-form').on('submit', function(e) {
+//     e.preventDefault();
+//     // console.log(this);
+//     $.ajax({
+//           url:"/goals",
+//           type:'put',
+//           dataType: 'JSON',
+//           data: {id: $(this).attr("data-id")}
+//         }).done(function(serverData) {
+//           console.log(serverData)
+//           // Do action here
+//           // console.log(serverData);
+//         }).
+//           fail(function(serverData) {
+//             console.log("That... Did not work at all");
+//             console.log(serverData);
 
-  //   });
-  // });
+//     });
+//   });
 
 
-});
+// });
 
 
 

@@ -54,7 +54,9 @@ get '/streaks/all' do
 end
 
 post '/streaks/all' do
-  @status = current_user.statuses.build!(content: params[:content])
+  @status = current_user.statuses.create(content: params[:content])
+  @status.save
+
 
   erb :streaksall
 end
@@ -88,6 +90,7 @@ get '/goals' do
     redirect '/'
   end
 end
+
 
 
 
